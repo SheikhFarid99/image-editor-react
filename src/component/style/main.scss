@@ -1,0 +1,190 @@
+.image_editor {
+    width: 100vw;
+    height: 100vh;
+    background-color: #e1e6ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card {
+        padding: 28px;
+        width: 700px;
+        height: 80%;
+        background-color: #fff;
+        box-shadow: 0 8px 16px 0px rgb(201, 201, 201);
+        .card_header {
+            text-align: center;
+            padding-bottom: 15px;
+            h2 {
+                text-transform: uppercase;
+                color: #e52fcf;
+            }
+        }
+        .card_body {
+            display: flex;
+            justify-content: center;
+            .sidebar {
+                .reset {
+                    margin-top: 20px;
+                    .save{
+                        background-color: #e335f3 !important;
+                        margin-left: 5px;
+                    }
+                    button {
+                        background-color: rgb(242,53,85);
+                        padding: 8px;
+                        border-radius: 3px;
+                        outline: none;
+                        border: 1px solid #dad7d7;
+                        cursor: pointer;
+                        color: #fff;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        font-size: 15px;
+                    }
+                }
+                span {
+                    font-size: 15px;
+                    color: #404040;
+                    margin-bottom: 4px;
+                    display: block;
+                }
+                .side_body {
+                    width: 250px;
+                    border: 1px solid #c3c5c4;
+                    margin-right: 8px;
+                    height: 300px;
+                    padding: 10px;
+                    .filter_key {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-gap: 8px;
+                        button.active {
+                            background-color: rgb(84, 93, 216);
+                            color: #fff;
+                        }
+                        button {
+                            padding: 8px;
+                            background-repeat: 3px;
+                            border: 1px solid #dad7d7;
+                            cursor: pointer;
+                            color: #404040;
+                            text-transform: capitalize;
+                        }
+                    }
+                    .filter_slider {
+                        margin: 15px 0px;
+                        .label_bar {
+                            margin-bottom: 4px;
+                            display: flex;
+                            justify-content: space-between;
+                            label,
+                            span {
+                                color: #404040;
+                                font-size: 15px;
+                                text-transform: capitalize;
+                            }
+                        }
+                        input {
+                            width: 100%;
+                        }
+                    }
+                    .rotate {
+                        label {
+                            margin-bottom: 8px;
+                            display: block;
+                            font-size: 15px;
+                            color: #404040;
+                        }
+                        .icon {
+                            display: grid;
+                            grid-template-columns: repeat(4, 1fr);
+                            grid-gap: 5px;
+                            div {
+                                border: 1px solid rgb(179, 194, 194);
+                                padding: 8px 5px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+            .image_section {
+                margin-left: 8px;
+                width: 350px;
+                background-color: #f0f0f0;
+                height: 300px;
+                .image {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                    img {
+                        object-fit: scale-down;
+                        transition: all 0.5s;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    label {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        border: dotted;
+                        border-color: #c5c9c5;
+                        cursor: pointer;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        svg {
+                            font-size: 40px;
+                            color: #b4acac;
+                        }
+                        span {
+                            color: #404040;
+                        }
+                    }
+                }
+                .image_select {
+                    margin: 20px 0px;
+                    display: flex;
+                    justify-content: flex-end;
+                    input {
+                        display: none;
+                    }
+                    label,
+                    button {
+                        padding: 8px;
+                        border-radius: 3px;
+                        outline: none;
+                        border: 1px solid #dad7d7;
+                        cursor: pointer;
+                        color: #fff;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        font-size: 15px;
+                    }
+                    .redo,
+                    .undo {
+                        background-color: #4a55f3;
+                        margin-left: 5px;
+                        color: #fff;
+                        padding: 5px 10px;
+                        font-size: 18px;
+                    }
+                    label {
+                        background-color: #115811;
+                        margin-left: 5px;
+                    }
+                    .crop {
+                        background-color: #8e33b7;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
